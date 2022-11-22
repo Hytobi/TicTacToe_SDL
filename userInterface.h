@@ -8,6 +8,7 @@ typedef enum { CROIX, ROND, EMPTY } Player;
 typedef struct ui {
     SDL_Window *window;
     SDL_Renderer *renderer;
+
 } userInterface;
 
 #endif

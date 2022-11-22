@@ -81,6 +81,7 @@ int verifFinPartie(ticTacToe* game, int x, int y) {
     // Si le joueur a gagné
     if (cGagne(game->board, game->player, y, x) >= 3) {
         printf("%s a gagné\n", game->player == CROIX ? "X" : "O");
+        sleep(5);
         return 1;
     }
     // Si la partie est pleine
