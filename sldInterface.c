@@ -38,8 +38,14 @@ userInterface sdlInterface_init() {
 
 void drawCross(userInterface ui, int x, int y) {
     SDL_SetRenderDrawColor(ui.renderer, 255, 0, 0, 255);
+    // On dessine la première diagonale
     SDL_RenderDrawLine(ui.renderer, x, y, x + TIER, y + TIER);
+    SDL_RenderDrawLine(ui.renderer, x + 1, y, x + TIER, y + TIER - 1);
+    SDL_RenderDrawLine(ui.renderer, x, y + 1, x + TIER - 1, y + TIER);
+    // On dessine la seconde diagonale
     SDL_RenderDrawLine(ui.renderer, x + TIER, y, x, y + TIER);
+    SDL_RenderDrawLine(ui.renderer, x + TIER, y + 1, x + 1, y + TIER);
+    SDL_RenderDrawLine(ui.renderer, x + TIER - 1, y, x, y + TIER - 1);
 }
 void drawCircle(userInterface ui, int x, int y) {
     /*
